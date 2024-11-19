@@ -1,0 +1,27 @@
+nav {
+    background-color: rgb(219, 219, 219);
+}
+
+.carousel-item {
+    height: 70vh;
+    object-fit: cover;
+    object-position: bottom !important;
+}
+
+h2 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+form {
+    margin-bottom: 2rem;
+}
+
+footer {
+    padding: 2rem;
+    background-color: rgb(219, 219, 219);
+}
