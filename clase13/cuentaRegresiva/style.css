@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label {
+    margin-top: 40px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+button, input {
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.animate {
+    animation-name: myOrbita;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+.cohete {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@keyframes myOrbita {
+    from {top: 200px;}
+    to {top: 0px;}
+}

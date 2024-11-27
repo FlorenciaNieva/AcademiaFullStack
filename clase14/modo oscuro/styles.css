@@ -1,0 +1,99 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  header {
+    background-color: #6f42c1;
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .mode-toggle {
+    background: white;
+    border: none;
+    color: #6f42c1;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  form input, form textarea, form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  footer {
+    background-color: #6f42c1;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+  
+  .dark-mode header {
+    background-color: #333;
+  }
+  
+  .dark-mode footer {
+    background-color: #333;
+  }
+  
+  .dark-mode .card {
+    border-color: #555;
+  }
+  
+  .dark-mode .mode-toggle {
+    background: #333;
+    color: #f1f1f1;
+  }
+  
