@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "nombre": "Remera básica",
+    "precio": 15.99,
+    "categoria": "ropa",
+    "imagen": "img/remera.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Pantalón deportivo",
+    "precio": 25.99,
+    "categoria": "ropa",
+    "imagen": "img/pantalon.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Zapatos deportivos",
+    "precio": 45.99,
+    "categoria": "calzado",
+    "imagen": "img/zapatillas.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Gorra clásica",
+    "precio": 9.99,
+    "categoria": "accesorios",
+    "imagen": "img/gorra.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Cinturón de cuero",
+    "precio": 19.99,
+    "categoria": "accesorios",
+    "imagen": "img/cinturon.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Camisa casual",
+    "precio": 29.99,
+    "categoria": "ropa",
+    "imagen": "img/camisa.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "Botas de invierno",
+    "precio": 59.99,
+    "categoria": "calzado",
+    "imagen": "img/botas.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "Bufanda de lana",
+    "precio": 12.99,
+    "categoria": "accesorios",
+    "imagen": "img/bufanda.jpg"
+  }
+]

@@ -1,0 +1,30 @@
+[
+    {
+      "id": 1,
+      "nombre": "Remera básica",
+      "precio": 15.99,
+      "categoria": "ropa",
+      "imagen": "img/remera.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Pantalón deportivo",
+      "precio": 25.99,
+      "categoria": "ropa",
+      "imagen": "img/pantalon.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Zapatos deportivos",
+      "precio": 45.99,
+      "categoria": "calzado",
+      "imagen": "img/zapatillas.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Gorra clásica",
+      "precio": 9.99,
+      "categoria": "accesorios",
+      "imagen": "img/gorra.jpg"
+    }
+  ]

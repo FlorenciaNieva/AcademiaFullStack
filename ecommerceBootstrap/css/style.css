@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: white;
+    color: #121212;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
 img {
     width: 100%;
 }
@@ -13,20 +23,35 @@ img {
     width: 5vw;
 }
 
-a {
+a{
     color: black !important;
+}
+
+body.dark-mode a{
+    color: white !important;
 }
 
 a:hover {
     color: #6b36d3 !important;
 }
 
-.btn {
+.btn{
     border-color: #6b36d3;
+}
+
+body.dark-mode .btn {
+    border-color: #6b36d3;
+    color: white;
+}
+
+.btn:hover {
+    background-color:#6b36d3;
+    color: white;
 }
 
 h1 {
     text-align: center;
+    margin: 1rem;
 }
 
 .btn-add-trolley {
@@ -44,7 +69,6 @@ h1 {
 }
 
 .carousel-item {
-    height: 82vh;
     object-fit: cover;
     object-position: bottom !important;
 }
@@ -58,12 +82,17 @@ h1 {
     transition: transform .6s;
 }
 
+body.dark-mode .card {
+    background-color: #121212 !important;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+
 .card:hover {
     transform: translate(0, -5px);
 }
 
 .img-products {
-    height: 300px;
+    height: 100%;
 }
 
 .img-category {
@@ -76,6 +105,11 @@ h1 {
 
 section {
     margin: 2rem 0px;
+}
+
+span {
+    display: none;
+    color: red;
 }
 
 footer {
@@ -96,6 +130,45 @@ footer a:hover {
     padding: 20px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+body.dark-mode .form{
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+
+.count-product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.count-product p {
+    margin: 5px;
+    padding-top: 3px;
+}
+
+.plus{
+    padding: 0px 7px;
+    border: 1px solid black;
+    border-radius: 100%;
+    align-self: center;
+}
+
+.less {
+    padding: 0px 9px;
+    border: 1px solid black;
+    border-radius: 100%;
+    align-self: center;
+}
+
+input[type="number"] {
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+}
+
+body.dark-mode input[type="number"] {
+    color: white;
 }
 
 .logo-form {
@@ -131,6 +204,29 @@ footer a:hover {
     transition-duration: 0.2s;
 }
 
+.disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+.button-form .active {
+    cursor: pointer;
+    background-color: #5a33a3;
+}
+
+body.dark-mode input {
+    background-color: #121212;
+}
+
 .button-form:hover {
     background-color: #b154dc;
+}
+
+@media (max-width: 991px) {
+    .nav-responsive {
+        display: block !important;
+    }
+    .nav-responsive form {
+        width: 30vw;
+    }
 }

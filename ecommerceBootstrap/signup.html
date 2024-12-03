@@ -1,87 +1,72 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/d0ec7b50c3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon" />
     <title>Registro</title>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/logo.svg" alt="Logo de un planeta de color violeta con el nombre de la marca">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="products.html">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="login.html">Inicio de sesión</a>
-                    </li>
-                </ul>
-                <div class="d-flex">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                        <button class="btn" type="submit">Buscar</button>
-                    </form>
-                    <a class="nav-link active" href="shoppingTrolley.html">Carrito</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <div id="nav"></div>
     <main>
         <div class="container d-flex justify-content-center mt-2 mb-2">
-            <form action="login" method="post" class="form d-flex flex-column align-items-center">
-                <div class="logo-form mb-2">
+            <form id="signup" class="form d-flex flex-column">
+                <div class="logo-form mb-2 align-self-center">
                     <img src="img/logo.svg" alt="logo">
                 </div>
                 <h1>Registrarme</h1>
                 <div class="mb-3">
-                    <label for="name" class="form-label">Nombre:</label>
-                    <input type="text" class="form-control" id="name"
+                    <label for="name" class="form-label"> Nombre: *</label>
+                    <input type="text" name="name" id="name" class="form-control"
                         placeholder="Ingrese un nombre de usuario">
+                    <span id="nameError">Error</span>
                 </div>
                 <div class="mb-3">
-                    <label for="emeil2" class="form-label">Email:</label>
-                    <input type="email" class="form-control" id="email2"
+                    <label for="email-signup" class="form-label"> Email: *</label>
+                    <input type="text" name="email-signup" id="email-signup" class="form-control"
                         placeholder="Ingrese un email">
+                    <span id="emailErrorSignup">Error</span>
                 </div>
                 <div class="mb-3">
-                    <label for="password2" class="form-label">Contraseña:</label>
-                    <input type="password" id="password2" class="form-control" aria-describedby="passwordHelpBlock"
+                    <label for="password-signup" class="form-label">Contraseña: *</label>
+                    <input type="password" name="password-signup" id="password-signup" class="form-control"
                         placeholder="Ingrese una contraseña">
+                    <span id="passwordErrorSignup">Error</span>
                 </div>
                 <div class="mb-3">
-                    <label for="password3" class="form-label">Contraseña:</label>
-                    <input type="password" id="password3" class="form-control" aria-describedby="passwordHelpBlock"
+                    <label for="repeat-password" class="form-label">Repetir contraseña: *</label>
+                    <input type="password" name="repeat-password" id="repeat-password" class="form-control"
                         placeholder="Ingrese nuevamente la contraseña">
+                    <span id="repeatErrorSignup">Error</span>
+                    <small>La contraseña debe tener minimo 6 caracteres y un caracter especial.</small>
                 </div>
                 <div class="form-check mb-3">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
+                    <label class="form-check-label">
+                        <input type="checkbox" name="terms" id="checkbox" class="form-check-input">
                         Acepto terminos y condiciones
                     </label>
+                    <span id="conditionsErrorSignup">Error</span>
                 </div>
-                <div><button type="submit" class="button-form">Registrar</button></div>
-                <div><a href="login.html" class="link">o Iniciar sesión</a></div>
+                <div class="align-self-center">
+                    <button type="submit" class="button-form disabled" disabled id="btn-signup">Registrar</button>
+                </div>
+                <div class="align-self-center">
+                    <a href="login.html" class="link">o Iniciar sesión</a>
+                </div>
             </form>
         </div>
     </main>
+    <div id="footer"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

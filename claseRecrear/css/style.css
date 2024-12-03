@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color: #121212;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.form {
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+}
+
+body.dark-mode .form {
+    background-color: black;
+}
+
+header {
+    position: relative;
+    top: 9vh;
+    height: 90vh;
+    background-color: #9b9b9b;
+}
+
+a {
+    color: white !important;
+}
+
+.navbar {
+    position: relative;
+    width: 5.5vw;
+    height: 90vh;
+}
+
+#navbarToggleExternalContent {
+    position: absolute;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #222529;
+    transition: left 0.3s ease-in-out;
+}
+
+#navbarToggleExternalContent.show {
+    left: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.navbar-toggler {
+    position: absolute;
+    top: 2vh;
+    left: 10px;
+}
+
+.navbar-collapse {
+    background-color: #343a40;
+}
+
+.btn {
+    background-color: rgb(139, 248, 88);
+    color: black;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+}
+
+main {
+    position: relative;
+    top: 10vh;
+}
+
+.dark {
+    background-color: #121212;
+}
+
+body.dark-mode .dark {
+    background-color: white;
+}
+
+.small {
+    height: 100px;
+}
+
+.full {
+    height: 300px;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.green {
+    background-color: rgb(139, 248, 88);
+}
+
+footer {
+    position: relative;
+    top: 10vh;
+    padding: 2rem;
+    color: white;
+    text-align: start;
+}
+
+.divide {
+    border-right: 1px solid white;
+}
+
+.form-comunication {
+    width: 30vw;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+body.dark-mode .form-comunication {
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+
+input,
+textarea {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.error {
+    display: none;
+    color: red;
+}
+
+#btnEnviar {
+    margin: 20px 0px;
+    background-color: rgb(139, 248, 88);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    transition-duration: 0.2s;
+}

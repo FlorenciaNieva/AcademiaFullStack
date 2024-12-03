@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda con Filtros</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="filtros">
+    <label for="categoria">Filtrar por categoría:</label>
+    <select id="categoria">
+      <option value="todos">Todos</option>
+      <option value="ropa">Ropa</option>
+      <option value="calzado">Calzado</option>
+      <option value="accesorios">Accesorios</option>
+    </select>
+
+    <label for="orden">Ordenar por:</label>
+    <select id="orden">
+      <option value="asc">Precio: Menor a Mayor</option>
+      <option value="desc">Precio: Mayor a Menor</option>
+    </select>
+  </div>
+
+  <div id="productos" class="grid-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

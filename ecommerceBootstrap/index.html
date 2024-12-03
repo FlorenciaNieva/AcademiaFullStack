@@ -10,44 +10,14 @@
     <meta property="og:type" content="website" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/d0ec7b50c3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="img/logo.svg" type="image/x-icon" />
     <title>Store Electronics</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/logo.svg" alt="Logo de un planeta de color violeta con el nombre de la marca">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="products.html">Productos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="login.html">Inicio de sesión</a>
-                    </li>
-                </ul>
-                <div class="d-flex">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                        <button class="btn" type="submit">Buscar</button>
-                    </form>
-                    <a class="nav-link active" href="shoppingTrolley.html">Carrito</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+<body class="light-mode">
+    <div id="nav"></div>
     <header>
         <div id="carouselExampleIndicators" class="carousel carousel-dark slide">
             <div class="carousel-indicators">
@@ -84,7 +54,7 @@
                 <div class="row row-cols-1 row-cols-md-5 g-4">
                     <div class="col">
                         <div class="card">
-                            <img src="img/SamsungA15.webp" class="card-img-top img-category" alt="...">
+                            <img src="img/samsungA15.svg" class="card-img-top img-category" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Celulares</h5>
                             </div>
@@ -92,7 +62,7 @@
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="img/NotebookHP.webp" class="card-img-top img-category" alt="...">
+                            <img src="img/notebookHP.svg" class="card-img-top img-category" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Computadoras</h5>
                             </div>
@@ -100,7 +70,7 @@
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="img/HearphonesJBL.webp" class="card-img-top img-category" alt="...">
+                            <img src="img/hearphonesJBL.svg" class="card-img-top img-category" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Auriculares</h5>
                             </div>
@@ -108,7 +78,7 @@
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="img/LoudspeakerJBL.webp" class="card-img-top img-category" alt="...">
+                            <img src="img/loudspeakerJBL.svg" class="card-img-top img-category" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Parlantes</h5>
                             </div>
@@ -116,7 +86,7 @@
                     </div>
                     <div class="col">
                         <div class="card">
-                            <img src="img/SmartwatchApple.webp" class="card-img-top img-category" alt="...">
+                            <img src="img/smartwatchApple.svg" class="card-img-top img-category" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">Smartwatchs</h5>
                             </div>
@@ -126,24 +96,11 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div class="container-fluid">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Instagram</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Facebook</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Dirección</a>
-                </li>
-            </ul>
-        </div>
-    </footer>
+    <div id="footer"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,165 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --color-bg: #f9f9f9;
+  --color-text: #333;
+  --color-header: #6200ea;
+  --color-footer: #333;
+  --color-card-bg: #fff;
+  --color-card-border: #ddd;
+  --color-btn-bg: #6200ea;
+  --color-btn-text: #fff;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+  --color-bg: #121212;
+  --color-text: #f9f9f9;
+  --color-header: #3700b3;
+  --color-footer: #1f1f1f;
+  --color-card-bg: #1f1f1f;
+  --color-card-border: #333;
+  --color-btn-bg: #bb86fc;
+}
+
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: var(--color-header);
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+}
+
+header button {
+  background-color: var(--color-btn-bg);
+  color: var(--color-btn-text);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+header button:hover {
+  opacity: 0.8;
+}
+
+/* Main */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+
+/* Cards */
+.card {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+
+/* Centrar el contenido del main */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px);
+  /* Resta espacio del header y footer */
+}
+
+/* Filtros */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+
+}
+
+.filtros label,
+.filtros select {
+  margin: 0;
+}
+
+/* Cards grid: de a dos por fila */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* Dos columnas */
+  gap: 20px;
+  justify-content: center;
+  width: 70%;
+  /* Ocupa el 70% del ancho del navegador */
+  margin: 0 auto;
+  /* Centra el contenedor horizontalmente */
+}
+
+/* Ajustar tamaño de las imágenes */
+.grid-container .card img {
+  width: 50%;
+  /* Reduce el tamaño de las imágenes al 50% */
+  height: auto;
+  /* Mantiene las proporciones */
+  margin: 0 auto;
+  /* Centra la imagen horizontalmente */
+  display: block;
+  /* Asegura que la imagen sea un bloque */
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-footer);
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* Responsivo: una sola columna en pantallas pequeñas */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    /* Una columna */
+    width: 90%;
+    /* Ocupa el 90% del ancho en pantallas pequeñas */
+  }
+}
