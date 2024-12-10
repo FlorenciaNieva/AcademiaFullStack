@@ -17,54 +17,15 @@
     <main>
         <h1>Carrito</h1>
         <section>
-            <div class="container d-flex flex-column align-items-center">
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="img/hearphonesJBL.svg" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Auriculares JBL</h5>
-                                <h5 class="card-title">$100.000</h5>
-                                <div class="count-product">
-                                    <p>Cantidad:</p>
-                                    <button class="plus">+</button>
-                                    <p>1</p>
-                                    <button class="less">-</button>
-                                </div>
-                            </div>
-                        </div>
+            <div class="container d-flex flex-column align-items-center" id="trolley-container"></div>
+            <div class="d-flex flex-column align-items-center">
+                <div>
+                    <div class="d-flex align-items-center">
+                    <h5>Total: </h5>
+                    <h5 id="total-price">$0</h5>
                     </div>
                 </div>
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="img/loudspeakerJBL.svg" class="img-fluid rounded-start" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Parlante JBL</h5>
-                                <h5 class="card-title">$100.000</h5>
-                                <div class="count-product">
-                                    <p>Cantidad:</p>
-                                    <button class="plus">+</button>
-                                    <p>1</p>
-                                    <button class="less">-</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="d-flex flex-column align-items-center">
-                    <div class="card">
-                        <div class="d-flex align-items-center">
-                        <h5>Total: </h5>
-                        <h5>$200.000</h5>
-                        </div>
-                    </div>
-                    <button type="submit" class="button-form">Comprar</button>
-                </div>
+                <button type="submit" class="button-form" onclick="buyItems()">Comprar</button>
             </div>
         </section>
     </main>
@@ -72,7 +33,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-        <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -20,10 +20,6 @@ document.getElementById("nav").innerHTML = `
                     </li>
                 </ul>
                 <div class="d-flex nav-responsive gap-2">
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-                        <button class="btn" type="submit">Buscar</button>
-                    </form>
                     <button class="btn" id="mode-toggle" class="mode-toggle">Modo Oscuro</button>
                     <a class="nav-link active" href="shoppingTrolley.html">
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -195,15 +191,173 @@ if (signupForm) {
     // Desabilitar botón
     const btnSignUp = document.getElementById("btn-signup");
 
-    checkbox.addEventListener("change", function() {
+    checkbox.addEventListener("change", function () {
         if (checkbox.checked) {
             btnSignUp.classList.remove("disabled");
-            btnSignUp.classList.add("active"); 
-            btnSignUp.removeAttribute("disabled"); 
+            btnSignUp.classList.add("active");
+            btnSignUp.removeAttribute("disabled");
         } else {
-            btnSignUp.classList.add("disabled"); 
+            btnSignUp.classList.add("disabled");
             btnSignUp.classList.remove("active");
             btnSignUp.setAttribute("disabled", true);
         }
     });
 }
+
+// Mostrar productos en Sección Productos
+let products = [];
+
+fetch("productos.json")
+    .then(res => res.json())
+    .then(data => {
+        products = data;
+        viewProducts(products);
+    })
+    .catch(error => console.log(error));
+
+const viewProducts = (products) => {
+    const container = document.getElementById("productos");
+    container.innerHTML = "";
+    products.forEach(product => {
+        const col = document.createElement("div");
+        col.className = "col";
+        col.innerHTML = `
+            <div class="card" id=${product.id}>
+                <img src=${product.img} class="card-img-top img-products" alt=${product.title}>
+                <div class="card-body d-flex flex-column justify-content-center">
+                    <h5 class="card-title">${product.title}</h5>
+                    <h5 class="card-title">$${product.price}</h5>
+                    <button class="btn btn-add-trolley" onClick=(addTrolley(${product.id}))>Agregar al carrito</button>
+                </div>
+            </div>
+        `;
+        container.appendChild(col);
+    });
+}
+
+// Filtrar los productos por la categoría seleccionada
+function filterCategory(category) {
+    const container = document.getElementById('productos-filtrados');
+    const titleCategory = document.getElementById('title-category');
+    const filteredProducts = products.filter(product => product.category === category);
+
+    container.innerHTML = '';
+
+    filteredProducts.forEach(product => {
+        const productCard = `
+            <div class="col">
+                <div class="card">
+                    <img src="${product.img}" class="card-img-top img-category" alt="${product.title}">
+                    <div class="card-body d-flex flex-column justify-content-center">
+                        <h5 class="card-title">${product.title}</h5>
+                        <p class="text-center">$${product.price}</p>
+                        <button class="btn btn-add-trolley" onClick=(addTrolley(${product.id}))>Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        container.innerHTML += productCard;
+        titleCategory.innerHTML = product.categoryName;
+    });
+
+    if (filteredProducts.length === 0) {
+        container.innerHTML = `<p>No hay productos disponibles en esta categoría.</p>`;
+    }
+}
+
+
+let trolley = JSON.parse(localStorage.getItem('trolley')) || [];
+
+function addTrolley(id) {    
+    const product = products.find(product => product.id === id);
+    if (product) {
+        trolley.push(product);
+        localStorage.setItem('trolley', JSON.stringify(trolley));
+    }
+
+    renderTrolley();
+}
+
+function renderTrolley() {
+    const trolleyContainer = document.getElementById('trolley-container');
+    const totalPriceContainer = document.getElementById('total-price');
+
+    trolleyContainer.innerHTML = '';
+
+    if (trolley.length === 0) {
+        trolleyContainer.innerHTML = '<p>El carrito está vacío.</p>';
+        totalPriceContainer.textContent = '$0';
+    } else {
+        let totalPrice = 0;
+
+        trolley.forEach(product => {
+            const productCard = `
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="${product.img}" class="img-fluid rounded-start" alt="${product.title}">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">${product.title}</h5>
+                                <h5 class="card-title">$${product.price}</h5>
+                                <div class="count-product">
+                                    <p>Cantidad:</p>
+                                    <button class="plus" onclick="changeQuantity('${product.id}', 1)">+</button>
+                                    <p>${product.quantity || 1}</p> <!-- Mostrar la cantidad actual -->
+                                    <button class="less" onclick="changeQuantity('${product.id}', -1)">-</button>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <i class="fa-solid fa-trash" onclick="removeFromTrolley('${product.id}')"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            trolleyContainer.innerHTML += productCard;
+            totalPrice += product.price * (product.quantity || 1);
+        });
+
+        document.getElementById('total-price').textContent = `$${totalPrice}`;
+    }
+}
+
+
+function changeQuantity(productId, change) {
+    const productIndex = trolley.findIndex(product => product.id === parseInt(productId));
+
+    if (productIndex !== -1) {
+        const product = trolley[productIndex];
+
+        product.quantity = (product.quantity || 1) + change;
+
+        if (product.quantity < 1) {
+            product.quantity = 1;
+        }
+        
+        localStorage.setItem('trolley', JSON.stringify(trolley));
+
+        renderTrolley();
+    }
+}
+
+function buyItems() {
+    if (trolley.length > 0) {
+        localStorage.removeItem('trolley');
+        alert('Compra exitosa!');
+        renderTrolley();
+    } else {
+        alert('El carrito está vacío.');
+    }
+}
+
+function removeFromTrolley(productId) {
+    trolley = trolley.filter(product => product.id !== parseInt(productId));
+
+    localStorage.setItem('trolley', JSON.stringify(trolley));
+
+    renderTrolley();
+}
+
+renderTrolley();

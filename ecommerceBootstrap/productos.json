@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "img": "img/samsungA15.svg",
+        "title": "Samsung A15",
+        "price": 100000,
+        "category": "phones",
+        "categoryName": "Celulares"
+    },
+    {
+        "id": 2,
+        "img": "img/notebookHP.svg",
+        "title": "Laptop HP",
+        "price": 100000,
+        "category": "computers",
+        "categoryName": "Computadoras"
+    },
+    {
+        "id": 3,
+        "img": "img/hearphonesJBL.svg",
+        "title": "Auriculares JBL",
+        "price": 100000,
+        "category": "headphones",
+        "categoryName": "Auriculares"
+    },
+    {
+        "id": 4,
+        "img": "img/loudspeakerJBL.svg",
+        "title": "Parlante JBL",
+        "price": 100000,
+        "category": "speakers",
+        "categoryName": "Parlantes"
+    },
+    {
+        "id": 5,
+        "img": "img/smartwatchApple.svg",
+        "title": "Smartwatch Apple",
+        "price": 100000,
+        "category": "smartwachts",
+        "categoryName": "SmartWachts"
+    },
+    {
+        "id": 6,
+        "img": "img/visionPro.svg",
+        "title": "Vision Pro Apple",
+        "price": 100000,
+        "category": "others",
+        "categoryName": "Otros"
+    }
+]

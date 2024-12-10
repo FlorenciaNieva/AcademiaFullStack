@@ -23,6 +23,10 @@ img {
     width: 5vw;
 }
 
+body.dark-mode .navbar-toggler {
+    background-color: white;
+}
+
 a{
     color: black !important;
 }
@@ -228,5 +232,8 @@ body.dark-mode input {
     }
     .nav-responsive form {
         width: 30vw;
+    }
+    .category {
+        display: none;
     }
 }

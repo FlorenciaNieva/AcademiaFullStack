@@ -53,46 +53,53 @@
                 <h2>Categorias</h2>
                 <div class="row row-cols-1 row-cols-md-5 g-4">
                     <div class="col">
-                        <div class="card">
+                        <div class="card" onclick="filterCategory('phones')">
                             <img src="img/samsungA15.svg" class="card-img-top img-category" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Celulares</h5>
+                                <h5 class="card-title category">Celulares</h5>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card">
+                        <div class="card" onclick="filterCategory('computers')">
                             <img src="img/notebookHP.svg" class="card-img-top img-category" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Computadoras</h5>
+                                <h5 class="card-title category">Computadoras</h5>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card">
+                        <div class="card" onclick="filterCategory('headphones')">
                             <img src="img/hearphonesJBL.svg" class="card-img-top img-category" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Auriculares</h5>
+                                <h5 class="card-title category">Auriculares</h5>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card">
+                        <div class="card" onclick="filterCategory('speakers')">
                             <img src="img/loudspeakerJBL.svg" class="card-img-top img-category" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Parlantes</h5>
+                                <h5 class="card-title category">Parlantes</h5>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card">
+                        <div class="card" onclick="filterCategory('smartwachts')">
                             <img src="img/smartwatchApple.svg" class="card-img-top img-category" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title">Smartwatchs</h5>
+                                <h5 class="card-title category">Smartwatchs</h5>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            
+        </section>
+        <section>
+            <div class="container">
+                <h3 class="text-center" id="title-category">Seleccione una categoria</h3>
+                <div class="row row-cols-1 row-cols-md-3 g-4" id="productos-filtrados"></div>
             </div>
         </section>
     </main>
